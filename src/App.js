@@ -7,6 +7,7 @@ import ItemDetails from './pages/ItemDetails';
 import PageNotFound from './pages/PageNotFound';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Favorite from './pages/Favorite';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<PageLayout />}>
               <Route index element={<Home />}></Route>
               <Route path="/cart" element={<Cart />}></Route>
+              <Route path="/favorite" element={<Favorite />}></Route>
               <Route path="/login" element={<Login />}></Route>
               <Route path="/register" element={<Register />}></Route>
               <Route path="/item/:id" element={<ItemDetails />}></Route>

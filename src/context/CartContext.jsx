@@ -8,13 +8,10 @@ const CartProvider = ({ children }) => {
     const [items, setItems] = useState(defaultCart)
 
     useEffect(()=>{
-        console.log("Items", items)
         localStorage.setItem("cart", JSON.stringify(items))
     },[items])
 
     const addToCart = (data, findCartItem) => {
-        console.log("Add to Cart function....")
-        console.log(data, findCartItem)
         if (!findCartItem) {
             return setItems((items) => [data, ...items])
         }
